@@ -41,3 +41,16 @@ jobs:
     steps:
       - name: Run tests
         run: echo "Testing..."
+  
+  j3-load-test:
+    name: load-test-ubuntu
+    runs-on: ubuntu-latest
+    environment: Load-Test
+    steps:
+      - name: Run tests
+        run: echo "Testing..."
+      
+      - name: Sleep for 15 seconds
+        run: | 
+          sleep 15
+          echo "Whoops I fell asleep for a few seconds!" 
