@@ -33,3 +33,9 @@ jobs:
         run: echo "Current working branch is:" ${{ github.ref}} 
       - name: 📂 List Files
         run: echo "Files in repo:" ls ${{ github.workspace}}
+
+    j2-test:
+      name: test-ubuntu-after-build
+      runs-on: ubuntu-22.04
+      environment: Test
+      run: echo "Testing...""
