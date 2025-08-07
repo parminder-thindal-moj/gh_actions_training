@@ -34,8 +34,10 @@ jobs:
       - name: 📂 List Files
         run: echo "Files in repo:" ls ${{ github.workspace}}
 
-    j2-test:
-      name: test-ubuntu-after-build
-      runs-on: ubuntu-22.04
-      environment: Test
-      run: echo "Testing...""
+  j2-test:
+    name: test-ubuntu-after-build
+    runs-on: ubuntu-22.04
+    environment: Test
+    steps:
+      - name: Run tests
+        run: echo "Testing..."
